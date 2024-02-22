@@ -22,6 +22,8 @@ let previous_name=0;
 //initial flag
 let flag = 0;
 
+let seatsLeft = 40;
+
 
 //clicking all ticket btn
 ticketBtns.forEach((ticketBtn)=>{
@@ -29,6 +31,10 @@ ticketBtns.forEach((ticketBtn)=>{
 
         if (flag < 4){
             ticketBtn.className='btn btn-success py-3 px-5 mx-4 seatPosition'
+            seatsLeft = seatsLeft-1;
+            function getinnerHTML() {
+              document.getElementById("SeatsLeft").innerText = seatsLeft;
+            }
         } else {
             ticketBtn.className='btn btn-secondary py-3 px-5 mx-4 seatPosition'
         }
@@ -56,6 +62,9 @@ function myFunction() {
         grandTotalDisplay.textContent=totalAmount-((totalAmount*15)/100);
     } else if (cuponeTotalDiscount == "Couple20") {
         grandTotalDisplay.textContent=totalAmount-((totalAmount*20)/100);
+    } else if (cuponeTotalDiscount == "") {
+        a = document.getElementById("cupon_apply")
+        a.className='btn btn-success col-3 disable'
     } else {
         grandTotalDisplay.textContent=totalAmount;
     }

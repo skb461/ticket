@@ -43,7 +43,7 @@
 		      <h1 class="card-title display-1 fw-bold text-center text-light pt-5">End-to-End Travel with</h1>
 		      <h1 class="card-text display-1 fw-bold text-center text-success">P Paribahan</h1>
 		      <p class="card-text text-light text-center">Yes, you can run unit tests and view the results directly within the app. The<br>integrated testing features allow for a streamlined .</p>
-		      <a href="#" class="btn btn-success text-dark p-3 fw-bold">Buy Ticket</a>
+		      <a href="#ticket_buy" class="btn btn-success text-dark p-3 fw-bold">Buy Ticket</a>
 		    </div>
 		  </div>
 		</div>
@@ -159,7 +159,7 @@
 					  			</div>
 					  			<div class="col-3">
 					  				<div class="card py-2 px-4 bg-success text-light bg-opacity-75">
-					  					<p class="pt-2"><img src="websiteImage/seat-green.png" width="20px" height="20px" alt=""> 40 Seats left</p>
+					  					<p class="pt-2"><img src="websiteImage/seat-green.png" width="20px" height="20px" alt=""> <span class="seatsLeft" id="SeatsLeft">40</span> Seats left</p>
 					  				</div>
 					  			</div>
 					  		</div>
@@ -194,7 +194,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="container my-3 bg-white p-4 rounded">
+			<div class="container my-3 bg-white p-4 rounded" id="ticket_buy">
 				<div class="row">
 					<div class="col-7 p-2" style="border-right: 5px dotted #198754;">
 						<p class="text-dark text-left fs-4">Select your Seats</p>
@@ -299,7 +299,7 @@
 							</table>
 							<div class="p-3 row bg-white m-2 rounded">
 								<input class="form-control col bg-transparent border-0" id="coupne" type="text" placeholder="Apply Coupne Code" value="" >
-								<button onclick="myFunction()" class="btn btn-success col-3">Apply</button>
+								<button onclick="myFunction()" class="btn btn-success col-3" id="cupon_apply">Apply</button>
 							</div>
 							<div class="row pt-4">
 								<p class="text-muted col text_l fs-5 fw-bolder ">Grand Total</p>
